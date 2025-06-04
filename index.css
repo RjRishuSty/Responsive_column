@@ -12,34 +12,38 @@ body {
   align-items: center;
   font-family: "Times New Roman", Times, serif !important;
 }
-.card {
-  border: 2px solid rgb(0, 0, 0);
+.container {
+  /* border: 2px solid rgb(0, 0, 0); */
   width: 80%;
-  height: 70vh;
+  height: auto;
   cursor: pointer;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden !important;
+  box-shadow: 0px 0px 5px black;
 }
 
 .img-container {
-  /* border: 2px solid red; */
   width: 45%;
-  height: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: auto;
+  object-fit: cover !important;
   object-position: center;
+  background-color: #fff;
+
 }
 .content {
-  border: 2px solid red;
   width: 55%;
   height: 100%;
-  padding: 20px;
+  padding: 31px;
   background-color: #c1eab0;
 }
 .content h4 {
@@ -59,7 +63,6 @@ body {
     font-weight: 500;
 }
 .description{
-    border: 2px solid blue;
     width: 100%;
     height: auto;
     margin-top: 15px;
@@ -70,27 +73,18 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
 }
-ul{
-    list-style:circle;
-    /* border: 2px solid red; */
-    padding: 0px 25px;
-}
-ul li{
-    margin: 5px;
+
+.description{
     font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-.description p{
-    font-size: 1.2rem;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 20px;
     letter-spacing: 0.5px;
-    /* word-spacing: 1px; */
+    line-height: 30px;
 }
 .btn{
-    width: 50%;
-    height: auto;
-    font-size: 1.2rem;
+    width: 300px;
+    height: 50px;
+    font-size: 1.1rem;
     font-weight: 600;
     color: white;
     text-transform: capitalize;
@@ -99,7 +93,7 @@ ul li{
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    background-color: rgb(33, 139, 3);
+    background-color: rgb(0, 0, 0);
     filter: brightness(90%);
     
 }
@@ -107,24 +101,17 @@ ul li{
     filter: brightness(100%);
 }
 
-@media (max-width:1169px) {
-    .card{
-        width: 100%;
-        height: auto;
-        border: 2px solid red;
-    }
-    .img-container img {
-  width: 100%;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-}
+@media (max-width:1000px) {
+  .container{
+    width: 90%;
+  }
     
 }
 
 @media (max-width: 800px) {
-  .card {
+  .container {
     flex-direction: column;
+    margin: 10% 0px;
     width: 95%;
     height: auto;
   }
@@ -135,13 +122,20 @@ ul li{
   }
 
   .img-container img {
+    width: 70%;
     height: auto;
-    max-height: 300px;
   }
 
   .btn {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+
+  .img-container img {
+    width: 100%;
+    height: auto;
   }
 }
